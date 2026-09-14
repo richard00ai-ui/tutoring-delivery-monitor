@@ -1,0 +1,16 @@
+services:
+  archive-monitor:
+    build: .
+    container_name: archive-monitor
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./lib:/app/lib:ro                       # 官方 SDK 库
+      - ./keys:/app/keys:ro                     # RSA 私钥(严格权限)
+      - ./data:/app/data                        # 输出数据(Mac 侧直接看)
+      - ./督学服务整理.xlsx:/app/督学服务整理.xlsx:ro   # 每天覆盖
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "10"

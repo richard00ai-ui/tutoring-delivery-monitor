@@ -1,0 +1,9 @@
+.env
+keys/*.pem
+lib/*.so
+lib/*.dll
+data/*.csv
+data/seq.txt
+data/unmatched_rooms.csv
+__pycache__/
+*.pyc

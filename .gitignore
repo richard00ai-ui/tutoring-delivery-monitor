@@ -1,0 +1,15 @@
+.env
+.env.local
+.DS_Store
+.claude/
+__pycache__/
+*.pyc
+
+# 真实业务数据：名册与判定结果，绝不提交
+data/
+*.xlsx
+*.zip
+keys/
+lib/
+*.pem
+logs/
